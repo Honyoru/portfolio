@@ -48,9 +48,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
             )}
             {siteAge && <IconText text={siteAge} icon={Timer} />}
             {earned && <IconText text={earned} icon={Earning} />}
-            {(ratings || githubStars) && (
-              <IconText text={(ratings || githubStars)?.toString() || ''} icon={Star} />
-            )}
           </ul>
         </div>
         <figure className="flex justify-end overflow-hidden">
