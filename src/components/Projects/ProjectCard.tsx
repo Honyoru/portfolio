@@ -19,8 +19,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
     shortDescription,
     visitors,
     earned,
-    ratings,
-    githubStars,
     numberOfSales,
     livePreview,
     githubLink,
