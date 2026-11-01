@@ -138,7 +138,6 @@ export const skillList = [
 export const footerLinks = [
   { title: 'About', href: '#' },
   { title: 'Projects', href: '#projects' },
-  { title: 'Testimonials', href: '#testimonials' },
   {
     title: 'Blogs',
     href: '#blogs',
@@ -172,4 +171,4 @@ export const themes = [
   },
 ]
 
-export const languages = ['En', 'Es', 'Fr', 'De', 'Ru']
+export const languages = ['En']
