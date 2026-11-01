@@ -1,8 +1,12 @@
+import falco from '../../assets/images/falco.svg'
+
+
 const FROM = [0x05, 0xea, 0xfa] // #05eafa
 const TO = [0x00, 0x77, 0xd9] // #0077d9
 
-const COPIES = 8 // keep it even
+const COPIES = 8 // need to be even
 const ASPECT = 1316.2211 / 866.192 // viewBox ratio of the svg
+const falcoUrl = typeof falco === 'string' ? falco : (falco as { src: string }).src
 
 const mix = (t: number) =>
   `rgb(${FROM.map((c, i) => Math.round(c + (TO[i] - c) * t)).join(',')})`
@@ -11,8 +15,8 @@ const mix = (t: number) =>
 const colors = Array.from({ length: COPIES }, (_, i) => mix(1 - Math.abs((i / COPIES) * 2 - 1)))
 
 const maskStyle = {
-  WebkitMaskImage: 'url(/falco.svg)',
-  maskImage: 'url(/falco.svg)',
+  WebkitMaskImage: `url(${falcoUrl})`,
+  maskImage: `url(${falcoUrl})`,
   WebkitMaskRepeat: 'no-repeat',
   maskRepeat: 'no-repeat',
   WebkitMaskPosition: 'center',
