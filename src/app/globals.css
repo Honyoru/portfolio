@@ -87,6 +87,7 @@
   --animate-fade-in: fade-in 0.5s ease-out 1;
   --animate-blink: blink 0.8s ease-in-out infinite;
   --animate-fade-up: fade-up 0.3s ease-out 1;
+  --animate-falco-drift: falco-drift 40s linear infinite;
 
   --background-image-large-glow: url('../assets/images/bg-lg.svg');
   --background-image-small-glow: url('../assets/images/bg-sm.svg');
@@ -98,6 +99,14 @@
   --font-fira-code: Fira Code, monospace;
   --font-inter: Inter, sans-serif;
 
+  @keyframes falco-drift {
+    from { 
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
   @keyframes fade-in {
     0% {
       opacity: 0;

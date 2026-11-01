@@ -1,5 +1,6 @@
 'use client'
 import { ReactNode, useEffect, useRef, useState } from 'react'
+import FalcoBackground from './FalcoBackground'
 
 type MarqueeWrapperProps = {
   children: ReactNode
@@ -43,7 +44,8 @@ const MarqueeWrapper: React.FC<MarqueeWrapperProps> = ({ children, className = '
 
   return (
     <div className={`relative overflow-x-hidden ${className}`}>
-      <div className="inter w-max whitespace-nowrap p-5 lg:p-7" ref={elementRef}>
+      <FalcoBackground />
+      <div className="inter relative w-max whitespace-nowrap p-5 lg:p-7" ref={elementRef}>
         {children}
       </div>
     </div>
