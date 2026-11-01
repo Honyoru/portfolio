@@ -254,8 +254,6 @@ export {
   PreviewIcon,
   ReactIcon,
   SocketIcon,
-  Star,
-  StarIcon,
   TailwindCSS,
   Timer,
   TypescriptIcon,

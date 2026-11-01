@@ -1,6 +1,6 @@
 import { Project } from '@/lib/types'
 import Image from 'next/image'
-import { Earning, GithubIcon, Likes, PreviewIcon, Star, Timer } from '../../utils/icons'
+import { Earning, GithubIcon, Likes, PreviewIcon, Timer } from '../../utils/icons'
 
 const IconText: React.FC<{ icon: string; text: string }> = ({ icon, text }) => (
   <li className="flex gap-2">
