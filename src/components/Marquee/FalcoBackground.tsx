@@ -1,4 +1,4 @@
-import falco from '../../assets/images/falco.svg'
+import falco from '@/assets/images/Falco.svg'
 
 
 const FROM = [0x05, 0xea, 0xfa] // #05eafa
