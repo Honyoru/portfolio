@@ -23,6 +23,10 @@ const navItems = [
     label: '_contact-me',
     href: '/#contact',
   },
+  {
+  label: '_cv',
+    href: '@/app/cv',
+  },
 ]
 
 const Navbar = () => {
