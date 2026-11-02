@@ -25,13 +25,20 @@ const maskStyle = {
   maskSize: 'contain',
 } as const
 
+// soft top/bottom edges so the band never ends on a hard line
+const fade = 'linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent)'
+const fadeStyle = { WebkitMaskImage: fade, maskImage: fade } as const
+
 const FalcoBackground = () => {
   // two identical sets -> translating the track by -50% is a perfect loop
   const items = [...colors, ...colors]
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="animate-falco-drift flex h-full w-max opacity-40 blur-[6px] motion-reduce:animate-none">
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 flex items-center overflow-hidden"
+      style={fadeStyle}>
+      <div className="animate-falco-drift flex h-[70%] w-max opacity-40 blur-[3px] motion-reduce:animate-none">
         {items.map((color, i) => (
           <div
             key={i}

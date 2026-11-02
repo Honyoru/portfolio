@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
 
           <h2 className="text-neutral mt-3">
-            Always learning new way to solve new problems !
+            Always learning new ways to solve new problems !
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
@@ -33,7 +33,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/romain-viala-44006632a/"
               aria-label="View LinkedIn Profile"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
-              LinkedIn Profile
+              My LinkedIn Profile
             </a>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Hero = () => {
               fill={true}
               priority={true}
               sizes="(min-width: 1024px) 25.75rem, (min-width: 768px) 20rem, (min-width: 640px) 15rem, 14rem"
-              alt="Romain Viala - Full Stack Developer"
+              alt="Romain Viala"
               className="object-contain p-7"
             />
             <Ellipse
