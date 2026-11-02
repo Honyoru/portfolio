@@ -1,9 +1,10 @@
 {
   "priority": 1,
-  "title": "Color Contrast Collection",
-  "shortDescription": "Curated Background with Text colors contrast, help you to pick best contrast for your websites",
-  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1645090814/color-contrast_n598kw.png",
-  "livePreview": "https://example.com/alpha",
-  "type": "Fac",
-  "siteAge": "+5 years"
+  "title": "Bubbles",
+  "livePreview": "https://bubbles-hony.vercel.app/",
+  "shortDescription": "Job-search website where candidates and employers each get their own profile. Built with Next.js and modern web tooling.",
+  "cover": "/preview/bubbles.png",
+  "siteAge": "october 2026",
+  "githubLink": "https://github.com/Honyoru/Bubbles-pub",
+  "type": "Web 🌐"
 }

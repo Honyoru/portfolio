@@ -12,6 +12,19 @@ import SocketIcon from '../assets/icons/socket.svg'
 import TailwindCSS from '../assets/icons/tailwind-css.svg'
 import Timer from '../assets/icons/timer.svg'
 import TypescriptIcon from '../assets/icons/typescript.svg'
+import PythonIcon from '../assets/icons/python.svg'
+import CIcon from '../assets/icons/c.svg'
+import JavascriptIcon from '../assets/icons/javascript.svg'
+import Html5Icon from '../assets/icons/html5.svg'
+import Css3Icon from '../assets/icons/css3.svg'
+import TailwindcssIcon from '../assets/icons/tailwindcss.svg'
+import GitIcon from '../assets/icons/git.svg'
+import JavaIcon from '../assets/icons/java.svg'
+import AsmIcon from '../assets/icons/asm.svg'
+import SqlIcon from '../assets/icons/sql.svg'
+import MongodbIcon from '../assets/icons/mongodb.svg'
+import LinuxIcon from '../assets/icons/linux.svg'
+import BashIcon from '../assets/icons/bash.svg'
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -235,25 +248,36 @@ const PhoneIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
 export {
   ArrowLeftIcon,
   ArrowRightIcon,
+  AsmIcon,
+  BashIcon,
   BurgerIcon,
   CheckIcon,
   ChevronRightIcon,
+  CIcon,
   CloseIcon,
   Codepen,
+  Css3Icon,
   Earning,
   ExpressjsIcon,
+  GitIcon,
   GithubIcon,
+  Html5Icon,
+  JavaIcon,
   JavaScriptIcon,
   Likes,
   LinkedIn,
+  LinuxIcon,
+  MongodbIcon,
   MsgIcon,
   NestjsIcon,
   NextjsIcon,
   NodejsIcon,
   PhoneIcon,
   PreviewIcon,
+  PythonIcon,
   ReactIcon,
   SocketIcon,
+  SqlIcon,
   TailwindCSS,
   Timer,
   TypescriptIcon,
