@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
           <div>
             <h5 className="text-neutral mb-4 text-lg font-medium">Credits</h5>
-            <div>
+            <div className="text-tertiary-content flex flex-col text-sm font-light">
               Picture : Léa Richard / Template : Abdul Basit
             </div>
           </div>
