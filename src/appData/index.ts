@@ -147,6 +147,10 @@ export const footerLinks = [
     title: 'Contact',
     href: '#contact',
   },
+  {
+    title: 'Cv',
+    href: '/cv',
+  },
 ]
 
 export const themes = [
