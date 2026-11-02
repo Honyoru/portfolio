@@ -2,7 +2,7 @@
   "priority": 4,
   "title": "3D Climbing Game",
   "shortDescription": "A 3D climbing game developed in C.",
-  "cover": "../preview/bubbles.png",
+  "cover": "/preview/bubbles.png",
   "siteAge": "may 2020",
   "type": "Game 🎮"
 }

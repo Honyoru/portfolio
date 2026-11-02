@@ -2,7 +2,7 @@
   "priority": 2,
   "title": "Hérisson vs Blaireau",
   "shortDescription": "A local multiplayer zone-capture game: the screen is projected for everyone and each player uses their phone as a controller.",
-  "cover": "../preview/bubbles.png",
+  "cover": "/preview/bubbles.png",
   "siteAge": "may 2020",
   "type": "Multiplayer 🎮"
 }

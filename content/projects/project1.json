@@ -3,7 +3,7 @@
   "title": "Bubbles",
   "livePreview": "https://bubbles-hony.vercel.app/",
   "shortDescription": "Job-search website where candidates and employers each get their own profile. Built with Next.js and modern web tooling.",
-  "cover": "../preview/bubbles.png",
+  "cover": "/preview/bubbles.png",
   "siteAge": "october 2026",
   "githubLink": "https://github.com/Honyoru/Bubbles-pub",
   "type": "Web 🌐"

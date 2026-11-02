@@ -2,7 +2,7 @@
   "priority": 5,
   "title": "Labyrinth Game",
   "shortDescription": "Digital adaptation of the board game Labyrinthe.",
-  "cover": "../preview/bubbles.png",
+  "cover": "/preview/bubbles.png",
   "siteAge": "may 2019",
   "type": "Game 🎮"
 }
