@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
 
           <h2 className="text-neutral mt-3">
-            Always learning to way to solve new problems !
+            Always learning new way to solve new problems !
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
