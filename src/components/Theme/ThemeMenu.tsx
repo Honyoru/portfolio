@@ -26,7 +26,7 @@ const ThemeMenu = () => {
   }
 
   return (
-    <div ref={menuRef} className="fixed right-6 bottom-4 z-50 md:right-11 md:bottom-11">
+    <div ref={menuRef} className="fixed right-6 bottom-4 z-50 md:right-11 md:bottom-11 print:hidden">
       <div
         onClick={() => setShowThemeMenu(!showThemeMenu)}
         className="bg-neutral cursor-pointer rounded-full p-1.5 md:p-2">

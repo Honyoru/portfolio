@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body className={`${firaCode.className}`}>
-        <header>
+        <header className="print:hidden">
           <Navbar />
         </header>
         {children}

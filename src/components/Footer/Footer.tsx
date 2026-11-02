@@ -4,7 +4,7 @@ import { socials } from '@/appData/personal'
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary relative flex min-h-[560px] flex-col justify-between gap-16 overflow-hidden px-4 py-14 md:p-14">
+    <footer className="bg-secondary relative flex min-h-[560px] flex-col justify-between gap-16 overflow-hidden px-4 py-14 md:p-14 print:hidden">
       <div className="relative z-20 flex flex-col gap-12">
         {/*<div>
           <h5 className="mb-8 flex items-center gap-2">
