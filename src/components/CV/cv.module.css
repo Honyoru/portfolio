@@ -340,10 +340,6 @@
 }
 
 @media print {
-  :global(body) {
-    background: none !important;
-  }
-
   .cv {
     background: none;
     padding: 0;
