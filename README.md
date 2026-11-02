@@ -34,7 +34,7 @@ The portfolio will now be running at `http://localhost:3000`.
 
 - **content:** Contains data for projects. Add any additional section data here.
 - **Components:** All the UI components of app e.g. navbar, hero, projects, footer etc
-- **src/services:** Retrieves data (e.g., projects, testimonials) using the fs module. Update this file if you change or modify the data source.
+- **src/services:** Retrieves data (e.g., projects, testimonials) using the fs module.
 - **src/assets:** Stores all assets, including images and icons, additionally you can add audio, video, and local fonts here.
 - **src/hooks:** Holds custom hooks.
 - **src/lib/types.d.ts:** Contains TypeScript types.
