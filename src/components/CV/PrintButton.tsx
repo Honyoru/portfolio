@@ -7,7 +7,7 @@ interface PrintButtonProps {
 const PrintButton = ({ className }: PrintButtonProps) => {
   return (
     <button type="button" onClick={() => window.print()} className={className}>
-      ⬇ Exporter en PDF (A4 – 1 page)
+      ⬇ Export PDF ⬇
     </button>
   )
 }
