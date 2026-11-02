@@ -12,7 +12,6 @@ import {
   BashIcon,
   JavaScriptIcon,
   NextjsIcon,
-  NodejsIcon,
   ReactIcon,
   TailwindCSS,
   TypescriptIcon,
@@ -48,7 +47,7 @@ export const projects = [
     "siteAge": "december 2019",
     "type": "Systems ⚙️"
   },
-  
+
   {
     "priority": 4,
     "title": "3D Climbing Game",
