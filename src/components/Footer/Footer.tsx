@@ -53,6 +53,12 @@ const Footer = () => {
               <span>34080, Montpellier</span>
             </address>
           </div>
+          <div>
+            <h5 className="text-neutral mb-4 text-lg font-medium">Credits</h5>
+            <div>
+              Picture : Léa Richard / Template : Abdul Basit
+            </div>
+          </div>
         </div>
       </div>
 
@@ -68,7 +74,6 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-
         <div>
           <p className="text-neutral mb-8 text-right text-sm">Languages</p>
           <div className="flex gap-8 md:gap-4 lg:gap-8">
