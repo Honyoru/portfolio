@@ -24,8 +24,8 @@ const navItems = [
     href: '/#contact',
   },
   {
-  label: '_cv',
-    href: '@/app/cv',
+    label: '_cv',
+    href: '/cv',
   },
 ]
 
