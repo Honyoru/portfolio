@@ -8,7 +8,7 @@
   --side-text: var(--primary);
   --accent: var(--tertiary);
   --accent-soft: var(--tertiary);
-  --bg: #e5e7eb;
+  --bg: var(--s);
   --paper: var(--primary);
   --text: var(--secondary);
   --muted: #4f4e8f;

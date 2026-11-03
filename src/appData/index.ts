@@ -137,8 +137,18 @@ export const skillList = [
 ]
 
 export const footerLinks = [
-  { title: 'About', href: '#' },
-  { title: 'Projects', href: '#projects' },
+  {
+    title: 'Home',
+    href: '#'
+  },
+  {
+    title: 'About Me',
+    href: '/about',
+  },
+  {
+    title: 'Projects',
+    href: '#projects'
+  },
   {
     title: 'Services',
     href: '#services',
@@ -173,3 +183,25 @@ export const themes = [
 ]
 
 export const languages = ['En']
+
+export const aboutSections = [
+  {
+    title: 'Who I am',
+    text: 'I came from near Saint-Etienne where I grow up and done most of my studies / life. Since 2024, I live in the Monspellier region.',
+    image: '/images/Saint-Etienne.jpeg',
+    alt: 'Saint-Etienne',
+  },
+  {
+    title: 'My biggest hobbie',
+    text: 'For years I organized esports events. Moreover, I am a player for MUC now but I had severals other teams. The game I play is Super Smash Bros Ultimate and play only one charater : Falco. I am one of the best on my character in France and I was in the top ~300 in France',
+    image: '/images/Honyoru.jpeg',
+    alt: 'Honyoru',
+  },
+  {
+    title: 'What I wish to do',
+    text: 'In the futur, I wish to have the luck to have varieties in my work. I love to learn new thing (Even if they aren\'t useful to me now)',
+    image: '/images/Futur.jpeg',
+    alt: 'Futur',
+  },
+]
+
