@@ -203,11 +203,5 @@ export const aboutSections = [
     image: '/images/Futur.jpeg',
     alt: 'Futur',
   },
-    {
-    title: 'New',
-    text: 'In the futur, I wish to have the luck to have varieties in my work. I love to learn new thing (Even if they aren\'t useful to me now)',
-    image: '/images/Futur.jpeg',
-    alt: 'Futur',
-  },
 ]
 
