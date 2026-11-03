@@ -187,7 +187,7 @@ export const languages = ['En']
 export const aboutSections = [
   {
     title: 'Who I am',
-    text: 'I came from near Saint-Etienne where I grow up and done most of my studies / life. Since 2024, I live in the Monspellier region.',
+    text: 'I came from near Saint-Etienne where I grow up and done most of my studies / life. Since 2024, I live in the Montpellier region.',
     image: '/images/Saint-Etienne.jpeg',
     alt: 'Saint-Etienne',
   },
