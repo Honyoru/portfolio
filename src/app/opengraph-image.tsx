@@ -27,10 +27,10 @@ export default async function Image() {
           padding: '1rem',
         }}>
         <h1 style={{ fontSize: 32, color: '#18f2e5', margin: 0 }}>
-          Romain Viala | Full-Stack Web Developer in Chicago
+          Romain Viala | Backend Develloper
         </h1>
         <h2 style={{ fontSize: 40, color: 'white', marginTop: 30 }}>
-          Crafting innovative solutions to solve real-world problems
+          Always learning new ways to solve new problems !
         </h2>
       </div>
     ),
