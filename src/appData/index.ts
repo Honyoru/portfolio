@@ -192,7 +192,7 @@ export const aboutSections = [
     alt: 'Saint-Etienne',
   },
   {
-    title: 'My biggest hobbie',
+    title: 'My biggest hobby',
     text: 'For years I organized esports events. Moreover, I am a player for MUC now but I had severals other teams. The game I play is Super Smash Bros Ultimate and play only one charater : Falco. I am one of the best on my character in France and I was in the top ~300 in France',
     image: '/images/Honyoru.jpeg',
     alt: 'Honyoru',
