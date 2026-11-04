@@ -5,6 +5,7 @@ import styles from './cv.module.css'
 
 const GITHUB_URL = 'https://github.com/Honyoru'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/romain-viala-44006632a/'
+const PORTFOLIO_URL = 'https://portfolio-romain-viala.vercel.app/'
 
 const devTags = [
   'Python',
@@ -130,7 +131,10 @@ const Cv = () => {
                 ⌨ <a href={GITHUB_URL}>github.com/Honyoru</a>
               </li>
               <li>
-                🔗 <a href={LINKEDIN_URL}>linkedin.com/in/romain-viala</a>
+                🔗 <a href={LINKEDIN_URL}>linkedin.com/in/romain-viala-44006632a</a>
+              </li>
+              <li>
+                🔗 <a href={PORTFOLIO_URL}>portfolio-romain-viala.vercel.app/</a>
               </li>
             </ul>
           </section>
