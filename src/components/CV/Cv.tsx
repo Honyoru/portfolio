@@ -1,102 +1,39 @@
+'use client'
+
 import { GithubIcon, LinkedIn } from '@/utils/icons'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import LangSwitch from './LangSwitch'
 import PrintButton from './PrintButton'
 import styles from './cv.module.css'
+import { cvContent, devTags, type CvLang } from './cvContent'
 
 const GITHUB_URL = 'https://github.com/Honyoru'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/romain-viala-44006632a/'
 const PORTFOLIO_URL = 'https://portfolio-romain-viala.vercel.app/'
 
-const devTags = [
-  'Python',
-  'C',
-  'JavaScript',
-  'HTML/CSS',
-  'Next.js',
-  'React',
-  'Tailwind',
-  'Git',
-  'Java',
-  'ASM',
-  'SQL',
-  'MongoDB',
-]
-
-const softSkills = [
-  'Autonome',
-  'Curieux',
-  'Polyvalent',
-  'Gestion de projet',
-  "Gestion d'équipe",
-  'Permis B – Véhiculé',
-]
-
-const experiences = [
-  {
-    title: "Animateur socioculturel et créateur d'événements esportifs",
-    date: '2024 – 2025',
-    org: 'Francas du Gard',
-    points: [
-      'Gestion des priorités et adaptabilité.',
-      'Collaboration et coordination en équipe.',
-      'Accompagnement des utilisateurs dans la prise en main des outils.',
-      'Résolution des imprévus et adaptation aux contraintes.',
-      "Conception et organisation d'événements esportifs.",
-      'Coordination de projets et planification des activités.',
-    ],
-  },
-  {
-    title: "Organisation d'événements e-sportifs",
-    date: '2020 – 2026',
-    org: 'AESE / Creator / UpsetFactory / MUC',
-    points: [
-      'Planification et gestion de projet',
-      'Coordination et collaboration en équipe',
-      'Gestion des ressources matérielles',
-      'Résolution de problèmes et gestion des imprévus',
-      'Organisation des tâches et gestion des priorités',
-    ],
-  },
-]
-
-const projects = [
-  {
-    title: 'Bubbles',
-    description: "Site web de recherche d'emploi. Utilisation d'outils modernes comme Next.js",
-  },
-  {
-    title: 'Hérisson vs Blaireau',
-    description:
-      'Jeu de capture de zone multijoueur via mobile (écran projeté, téléphone en guise de manette).',
-  },
-  {
-    title: 'Compilateur en C',
-    description: "Création d'un compilateur en langage C. Gestion de la reconnaissance de pattern.",
-  },
-  {
-    title: 'Jeu labyrinthe',
-    description: 'Adaptation du jeu de société « Labyrinthe ».',
-  },
-  {
-    title: "Jeu d'escalade",
-    description: "Jeu d'escalade en 3D développé en C.",
-  },
-]
-
-const education = [
-  {
-    title: "Pré-MSc / MSc – Titre RNCP Architecte de Systèmes d'Information",
-    date: '2026 – 2029',
-    org: 'Epitech – Gestion de projet, apprentissage web',
-  },
-  { title: 'TFP Animateur Esport', date: '2024 – 2025' },
-  { title: "Licence d'informatique", date: '2017 – 2020' },
-]
-
 const Cv = () => {
+  const [lang, setLang] = useState<CvLang>('fr')
+  const t = cvContent[lang]
+
+  // Lit ?lang=en dans l'URL pour pouvoir partager un lien direct vers la version anglaise
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get('lang')
+    if (param === 'en' || param === 'fr') setLang(param)
+  }, [])
+
+  const changeLang = (next: CvLang) => {
+    setLang(next)
+    const url = new URL(window.location.href)
+    if (next === 'fr') url.searchParams.delete('lang')
+    else url.searchParams.set('lang', next)
+    window.history.replaceState(null, '', url)
+  }
+
   return (
-    <div lang="fr" className={styles.cv}>
+    <div lang={lang} className={styles.cv}>
       <div className={styles.toolbar}>
+        <LangSwitch lang={lang} onChange={changeLang} />
         <PrintButton className={styles.download} />
       </div>
 
@@ -118,11 +55,11 @@ const Cv = () => {
               <span>Romain</span>
               <span>VIALA</span>
             </h1>
-            <p>Recherche d&apos;alternance</p>
+            <p>{t.lookingFor}</p>
           </div>
 
           <section className={styles.contact}>
-            <h2>Contact</h2>
+            <h2>{t.headings.contact}</h2>
             <ul>
               <li>📞 07 82 45 19 08</li>
               <li>✉ romain.vialapro@gmail.com</li>
@@ -140,7 +77,7 @@ const Cv = () => {
           </section>
 
           <section>
-            <h2>Langages &amp; Dev</h2>
+            <h2>{t.headings.dev}</h2>
             <div className={styles.tags}>
               {devTags.map((tag) => (
                 <span key={tag}>{tag}</span>
@@ -149,7 +86,7 @@ const Cv = () => {
           </section>
 
           <section>
-            <h2>Systèmes</h2>
+            <h2>{t.headings.systems}</h2>
             <div className={styles.tags}>
               <span>Linux</span>
               <span>Bash</span>
@@ -157,7 +94,7 @@ const Cv = () => {
           </section>
 
           <section>
-            <h2>Liens</h2>
+            <h2>{t.headings.links}</h2>
             <div className={styles.qrs}>
               <div className={styles.qr}>
                 <Image
@@ -187,19 +124,20 @@ const Cv = () => {
           </section>
 
           <section className={styles.quality}>
-            <h2>Soft skills</h2>
+            <h2>{t.headings.softSkills}</h2>
             <ul>
-              {softSkills.map((skill) => (
+              {t.softSkills.map((skill) => (
                 <li key={skill}>{skill}</li>
               ))}
             </ul>
           </section>
 
           <section className={styles.sideBottom}>
-            <h2>Langues</h2>
+            <h2>{t.headings.languages}</h2>
             <ul>
-              <li>Français</li>
-              <li>Anglais</li>
+              {t.languages.map((language) => (
+                <li key={language}>{language}</li>
+              ))}
             </ul>
           </section>
 
@@ -216,21 +154,15 @@ const Cv = () => {
         <div className={styles.main}>
           <header>
             <div className={styles.kicker}>Epitech</div>
-            <h1>Architecte de Systèmes d&apos;Information</h1>
-            <div className={styles.subtitle}>Développement logiciel • Web • Gestion de projet</div>
+            <h1>{t.jobTitle}</h1>
+            <div className={styles.subtitle}>{t.subtitle}</div>
           </header>
 
-          <div className={styles.banner}>
-            Actuellement en Pré-MSc à Epitech (2026-2029), je recherche une entreprise pour
-            m’accompagner jusqu’à l&apos;obtention titre d’Architecte de Systèmes d’Information. Mon
-            expérience dans l’événementiel m’a permis de développer la gestion de projet, le travail
-            en équipe, le respect des deadlines et la gestion des imprévus, des compétences que je
-            souhaite mettre au service de vos projets techniques.
-          </div>
+          <div className={styles.banner}>{t.summary}</div>
 
           <section>
-            <h2>Expériences</h2>
-            {experiences.map(({ title, date, org, points }) => (
+            <h2>{t.headings.experiences}</h2>
+            {t.experiences.map(({ title, date, org, points }) => (
               <div className={styles.item} key={title}>
                 <div className={styles.row}>
                   <h3>{title}</h3>
@@ -249,9 +181,9 @@ const Cv = () => {
           </section>
 
           <section>
-            <h2>Projets</h2>
+            <h2>{t.headings.projects}</h2>
             <div className={styles.projects}>
-              {projects.map(({ title, description }) => (
+              {t.projects.map(({ title, description }) => (
                 <div className={styles.proj} key={title}>
                   <b>{title}</b>
                   <span>{description}</span>
@@ -261,8 +193,8 @@ const Cv = () => {
           </section>
 
           <section>
-            <h2>Diplômes &amp; Formations</h2>
-            {education.map(({ title, date, org }) => (
+            <h2>{t.headings.education}</h2>
+            {t.education.map(({ title, date, org }) => (
               <div className={styles.item} key={title}>
                 <div className={styles.row}>
                   <h3>{title}</h3>

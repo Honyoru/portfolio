@@ -8,7 +8,7 @@
   --side-text: var(--primary);
   --accent: var(--tertiary);
   --accent-soft: var(--tertiary);
-  --bg: var(--s);
+  --bg: var(--p);
   --paper: var(--primary);
   --text: var(--secondary);
   --muted: #4f4e8f;
@@ -47,6 +47,31 @@
   color: var(--secondary);
   background: var(--accent);
   box-shadow: 0 4px 12px rgba(4, 2, 99, 0.35);
+}
+
+.langSwitch {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: 0 4px 12px rgba(4, 2, 99, 0.35);
+}
+
+.langSwitch button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--primary);
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.langSwitch button.langActive {
+  color: var(--secondary);
+  background: var(--accent);
 }
 
 /* ====== PAGE A4 ====== */
