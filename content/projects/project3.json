@@ -1,5 +1,5 @@
 {
-  "priority": 3,
+  "priority": 4,
   "title": "C Compiler",
   "shortDescription": "A compiler built in C, including pattern recognition to read and process source code.",
   "cover": "/preview/bubbles.png",

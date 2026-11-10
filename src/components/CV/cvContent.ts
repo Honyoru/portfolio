@@ -82,7 +82,7 @@ export const cvContent: Record<CvLang, CvContent> = {
     jobTitle: "Architecte de Systèmes d'Information",
     subtitle: 'Développement logiciel • Web • Gestion de projet',
     summary:
-      "Actuellement en Pré-MSc à Epitech (2026-2029), je recherche une entreprise pour m’accompagner jusqu’à l'obtention titre d’Architecte de Systèmes d’Information. Mon expérience dans l’événementiel m’a permis de développer la gestion de projet, le travail en équipe, le respect des deadlines et la gestion des imprévus, des compétences que je souhaite mettre au service de vos projets techniques.",
+      "Actuellement en Pré-MSc à Epitech (2026-2029), je recherche une entreprise pour m’accompagner jusqu’à l'obtention du titre d’Architecte de Systèmes d’Information. Mon expérience dans l’événementiel m’a permis de développer la gestion de projet, le travail en équipe, le respect des deadlines et la gestion des imprévus, des compétences que je souhaite mettre au service de vos projets techniques.",
     experiences: [
       {
         title: "Animateur socioculturel et créateur d'événements esportifs",
@@ -116,6 +116,11 @@ export const cvContent: Record<CvLang, CvContent> = {
         description: "Site web de recherche d'emploi. Utilisation d'outils modernes comme Next.js",
       },
       {
+        title: 'Dungeon crawler 2D',
+        description:
+          'Roguelite en Java/LibGDX développé en équipe de 3 : 3 classes, boss, niveaux procéduraux. Design patterns, tests unitaires.',
+      },
+      {
         title: 'Hérisson vs Blaireau',
         description:
           'Jeu de capture de zone multijoueur via mobile (écran projeté, téléphone en guise de manette).',
@@ -124,10 +129,6 @@ export const cvContent: Record<CvLang, CvContent> = {
         title: 'Compilateur en C',
         description:
           "Création d'un compilateur en langage C. Gestion de la reconnaissance de pattern.",
-      },
-      {
-        title: 'Jeu labyrinthe',
-        description: 'Adaptation du jeu de société « Labyrinthe ».',
       },
       {
         title: "Jeu d'escalade",
@@ -204,6 +205,11 @@ export const cvContent: Record<CvLang, CvContent> = {
         description: 'Job search website built with modern tools such as Next.js.',
       },
       {
+        title: '2D Dungeon crawler',
+        description:
+          'Roguelite in Java/LibGDX built in a team of 3: 3 classes, bosses, procedural levels. Design patterns, unit tests.',
+      },
+      {
         title: 'Hedgehog vs Badger',
         description:
           'Multiplayer area-capture game played on mobile (projected screen, phones used as controllers).',
@@ -211,10 +217,6 @@ export const cvContent: Record<CvLang, CvContent> = {
       {
         title: 'C Compiler',
         description: 'Building a compiler in C, including pattern recognition.',
-      },
-      {
-        title: 'Labyrinth game',
-        description: 'Adaptation of the board game “Labyrinth”.',
       },
       {
         title: 'Climbing game',

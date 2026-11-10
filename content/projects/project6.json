@@ -1,0 +1,7 @@
+{
+  "priority": 2,
+  "title": "2D Dungeon Crawler",
+  "shortDescription": "A roguelite built in Java with LibGDX in a team of 3: 3 playable classes, bosses and procedurally generated levels. Built with design patterns and covered by unit tests.",
+  "cover": "/preview/bubbles.png",
+  "type": "Game 🎮"
+}
