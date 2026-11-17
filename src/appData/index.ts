@@ -17,56 +17,6 @@ import {
   TypescriptIcon,
 } from '../utils/icons'
 
-// Project Data
-export const projects = [
-  {
-    "priority": 1,
-    "title": "Bubbles",
-    "livePreview": "https://bubbles-hony.vercel.app/",
-    "shortDescription": "Job-search website where candidates and employers each get their own profile. Built with Next.js and modern web tooling.",
-    "cover": "/preview/bubbles.png",
-    "siteAge": "october 2026",
-    "githubLink": "https://github.com/Honyoru/Bubbles-pub",
-    "type": "Web 🌐"
-  },
-
-  {
-    "priority": 2,
-    "title": "Hérisson vs Blaireau",
-    "shortDescription": "A local multiplayer zone-capture game: the screen is projected for everyone and each player uses their phone as a controller.",
-    "cover": "/preview/bubbles.png",
-    "siteAge": "may 2020",
-    "type": "Multiplayer 🎮"
-  },
-
-  {
-    "priority": 3,
-    "title": "C Compiler",
-    "shortDescription": "A compiler built in C, including pattern recognition to read and process source code.",
-    "cover": "/preview/bubbles.png",
-    "siteAge": "december 2019",
-    "type": "Systems ⚙️"
-  },
-
-  {
-    "priority": 4,
-    "title": "3D Climbing Game",
-    "shortDescription": "A 3D climbing game developed in C.",
-    "cover": "/preview/bubbles.png",
-    "siteAge": "may 2020",
-    "type": "Game 🎮"
-  },
-
-  {
-    "priority": 5,
-    "title": "Labyrinth Game",
-    "shortDescription": "Digital adaptation of the board game Labyrinthe.",
-    "cover": "/preview/bubbles.png",
-    "siteAge": "may 2019",
-    "type": "Game 🎮"
-  },
-]
-
 // Service Data
 export const serviceData = [
     

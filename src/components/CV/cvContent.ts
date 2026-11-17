@@ -1,4 +1,22 @@
 export type CvLang = 'fr' | 'en'
+export type CvVersion = 'design' | 'ats'
+
+export const contactInfo = {
+  phone: '07 82 45 19 08',
+  email: 'romain.vialapro@gmail.com',
+  city: 'Montpellier',
+  github: { url: 'https://github.com/Honyoru', label: 'github.com/Honyoru' },
+  linkedin: {
+    url: 'https://www.linkedin.com/in/romain-viala-44006632a/',
+    label: 'linkedin.com/in/romain-viala-44006632a',
+  },
+  portfolio: {
+    url: 'https://portfolio-romain-viala.vercel.app/',
+    label: 'portfolio-romain-viala.vercel.app',
+  },
+}
+
+export const systemTags = ['Linux', 'Bash']
 
 interface CvExperience {
   title: string
@@ -116,9 +134,9 @@ export const cvContent: Record<CvLang, CvContent> = {
         description: "Site web de recherche d'emploi. Utilisation d'outils modernes comme Next.js",
       },
       {
-        title: 'Dungeon crawler 2D',
+        title: 'Depth Diablo',
         description:
-          'Roguelite en Java/LibGDX développé en équipe de 3 : 3 classes, boss, niveaux procéduraux. Design patterns, tests unitaires.',
+          'Dungeon crawler 2D (roguelite) en Java/LibGDX développé en équipe de 3 : 3 classes, boss, niveaux procéduraux. Design patterns, tests unitaires.',
       },
       {
         title: 'Hérisson vs Blaireau',
@@ -205,9 +223,9 @@ export const cvContent: Record<CvLang, CvContent> = {
         description: 'Job search website built with modern tools such as Next.js.',
       },
       {
-        title: '2D Dungeon crawler',
+        title: 'Depth Diablo',
         description:
-          'Roguelite in Java/LibGDX built in a team of 3: 3 classes, bosses, procedural levels. Design patterns, unit tests.',
+          '2D roguelite dungeon crawler in Java/LibGDX built in a team of 3: 3 classes, bosses, procedural levels. Design patterns, unit tests.',
       },
       {
         title: 'Hedgehog vs Badger',
