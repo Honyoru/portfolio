@@ -154,7 +154,7 @@ export const cvContent: Record<CvLang, CvContent> = {
       },
       {
         title: 'Jeu labyrinthe',
-        description: 'Adaptation du jeu de société « Labyrinthe ». Utilisation du principe de POO.',
+        description: 'Adaptation du jeu de société « Labyrinthe ».',
       },
     ],
     education: [
@@ -246,8 +246,7 @@ export const cvContent: Record<CvLang, CvContent> = {
       },
       {
         title: 'Labyrinth game',
-        description:
-          'Adaptation of the board game "Labyrinth", using object-oriented programming principles.',
+        description: 'Adaptation of the board game "Labyrinth".',
       },
     ],
     education: [
