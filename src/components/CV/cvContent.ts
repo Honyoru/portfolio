@@ -152,6 +152,10 @@ export const cvContent: Record<CvLang, CvContent> = {
         title: "Jeu d'escalade",
         description: "Jeu d'escalade en 3D développé en C.",
       },
+      {
+        title: 'Jeu labyrinthe',
+        description: 'Adaptation du jeu de société « Labyrinthe ». Utilisation du principe de POO.',
+      },
     ],
     education: [
       {
@@ -239,6 +243,11 @@ export const cvContent: Record<CvLang, CvContent> = {
       {
         title: 'Climbing game',
         description: '3D climbing game developed in C.',
+      },
+      {
+        title: 'Labyrinth game',
+        description:
+          'Adaptation of the board game "Labyrinth", using object-oriented programming principles.',
       },
     ],
     education: [
