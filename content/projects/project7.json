@@ -1,0 +1,9 @@
+{
+  "priority": 2,
+  "title": "Particle Simulator",
+  "shortDescription": "A real-time 2D particle simulation written in Rust with macroquad, built to learn the language: gravity, edge bounces and particle-particle collisions.",
+  "cover": "/preview/particule-simulator.gif",
+  "siteAge": "november 22, 2026",
+  "githubLink": "https://github.com/Honyoru/ParticuleSimulator",
+  "type": "Simulation 🦀"
+}

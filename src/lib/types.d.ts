@@ -2,7 +2,7 @@ export interface Project {
   title: string
   shortDescription: string
   priority: number
-  cover: string
+  cover?: string
   livePreview?: string
   githubLink?: string
   visitors?: string

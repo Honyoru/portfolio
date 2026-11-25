@@ -1,8 +1,8 @@
 {
-  "priority": 2,
+  "priority": 3,
   "title": "Depth Diablo",
   "shortDescription": "A 2D dungeon crawler roguelite built in Java with LibGDX in a team of 3: 3 playable classes, bosses and procedurally generated levels. Built with design patterns and covered by unit tests.",
-  "cover": "/preview/bubbles.png",
+  "cover": "/preview/depth-diablo.png",
   "siteAge": "november 2, 2026",
   "type": "Game 🎮"
 }

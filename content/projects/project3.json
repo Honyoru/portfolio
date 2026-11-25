@@ -1,8 +1,7 @@
 {
-  "priority": 4,
+  "priority": 5,
   "title": "C Compiler",
   "shortDescription": "A compiler built in C, including pattern recognition to read and process source code.",
-  "cover": "/preview/bubbles.png",
   "siteAge": "december 2019",
   "type": "Systems ⚙️"
 }

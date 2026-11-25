@@ -139,6 +139,11 @@ export const cvContent: Record<CvLang, CvContent> = {
           'Dungeon crawler 2D (roguelite) en Java/LibGDX développé en équipe de 3 : 3 classes, boss, niveaux procéduraux. Design patterns, tests unitaires.',
       },
       {
+        title: 'Simulateur de particules',
+        description:
+          'Simulation 2D de particules en temps réel en Rust (macroquad) : gravité, rebonds, collisions entre particules.',
+      },
+      {
         title: 'Hérisson vs Blaireau',
         description:
           'Jeu de capture de zone multijoueur via mobile (écran projeté, téléphone en guise de manette).',
@@ -151,10 +156,6 @@ export const cvContent: Record<CvLang, CvContent> = {
       {
         title: "Jeu d'escalade",
         description: "Jeu d'escalade en 3D développé en C.",
-      },
-      {
-        title: 'Jeu labyrinthe',
-        description: 'Adaptation du jeu de société « Labyrinthe ».',
       },
     ],
     education: [
@@ -232,6 +233,11 @@ export const cvContent: Record<CvLang, CvContent> = {
           '2D roguelite dungeon crawler in Java/LibGDX built in a team of 3: 3 classes, bosses, procedural levels. Design patterns, unit tests.',
       },
       {
+        title: 'Particle Simulator',
+        description:
+          'Real-time 2D particle simulation in Rust (macroquad): gravity, edge bounces, particle-particle collisions.',
+      },
+      {
         title: 'Hedgehog vs Badger',
         description:
           'Multiplayer area-capture game played on mobile (projected screen, phones used as controllers).',
@@ -243,10 +249,6 @@ export const cvContent: Record<CvLang, CvContent> = {
       {
         title: 'Climbing game',
         description: '3D climbing game developed in C.',
-      },
-      {
-        title: 'Labyrinth game',
-        description: 'Adaptation of the board game "Labyrinth".',
       },
     ],
     education: [
