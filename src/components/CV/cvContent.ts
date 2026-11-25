@@ -69,9 +69,11 @@ export const devTags = [
   'Tailwind',
   'Git',
   'Java',
+  'Rust',
   'ASM',
   'SQL',
   'MongoDB',
+  'Claude',
 ]
 
 export const cvContent: Record<CvLang, CvContent> = {
