@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import Footer from '@/components/Footer/Footer'
+import OverscrollBackdrop from '@/components/Footer/OverscrollBackdrop'
 import Navbar from '@/components/Navbar/Navbar'
 import ThemeMenu from '@/components/Theme/ThemeMenu'
 import { Fira_Code } from 'next/font/google'
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body className={`${firaCode.className}`}>
+        <OverscrollBackdrop />
         <header className="print:hidden">
           <Navbar />
         </header>
