@@ -90,10 +90,10 @@
 .side {
   background: var(--side);
   color: var(--side-text);
-  padding: 9mm 7mm 8mm;
+  padding: 8mm 7mm 6mm;
   display: flex;
   flex-direction: column;
-  gap: 3.6mm;
+  gap: 3mm;
 }
 
 .photo {
@@ -232,10 +232,10 @@
   display: block;
   flex: none;
   max-width: 38mm;
-  max-height: 11mm;
+  max-height: 12mm;
   width: auto;
   height: auto;
-  margin: 0 auto;
+  margin: auto auto 0;
   object-fit: contain;
 }
 

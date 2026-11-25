@@ -169,8 +169,8 @@ const Cv = () => {
               className={styles.logo}
               src="/images/epitech.svg"
               alt="Epitech"
-              width={152}
-              height={56}
+              width={504}
+              height={393}
             />
           </aside>
 
