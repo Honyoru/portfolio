@@ -148,6 +148,8 @@
 }
 
 html {
+  /* seen when overscrolling (rubber-band): match the footer */
+  background-color: var(--s);
   scroll-behavior: smooth !important;
   scrollbar-width: none;
   ::-webkit-scrollbar {

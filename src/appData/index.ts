@@ -15,6 +15,9 @@ import {
   ReactIcon,
   TailwindCSS,
   TypescriptIcon,
+  RustIcon,
+  AsmIcon,
+  ClaudeIcon,
 } from '../utils/icons'
 
 // Service Data
@@ -26,9 +29,9 @@ export const serviceData = [
     shortDescription: 'Writing clean scripts and applications to automate tasks and process data with Python.',
   },
   {
-    icon: JavaScriptIcon,
-    title: 'JavaScript Development',
-    shortDescription: 'Creating dynamic and interactive web applications using JavaScript.',
+    icon: JavaIcon,
+    title: 'Java Development',
+    shortDescription: 'Building object-oriented applications and games in Java, with design patterns and unit tests.',
   },
   {
     icon: ReactIcon,
@@ -46,9 +49,9 @@ export const serviceData = [
     shortDescription: 'Ensuring robust and maintainable code with TypeScript.',
   },
   {
-    icon: TailwindCSS,
-    title: 'Tailwind CSS Styling',
-    shortDescription: 'Designing beautiful and responsive interfaces with Tailwind CSS.',
+    icon: RustIcon,
+    title: 'Rust Development',
+    shortDescription: 'Writing fast and memory-safe programs in Rust, from simulations to systems tools.',
   },
   {
     icon: CIcon,
@@ -84,6 +87,9 @@ export const skillList = [
   { name: 'Git', icon: GitIcon },
   { name: 'Linux', icon: LinuxIcon },
   { name: 'Bash', icon: BashIcon },
+  { name: 'Rust', icon: RustIcon },
+  { name: 'ASM', icon: AsmIcon },
+  { name: 'Claude', icon: ClaudeIcon },
 ]
 
 export const footerLinks = [

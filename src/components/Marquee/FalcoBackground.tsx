@@ -28,6 +28,9 @@ const maskStyle = {
 // soft top/bottom edges so the band never ends on a hard line
 const fade = 'linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent)'
 const fadeStyle = { WebkitMaskImage: fade, maskImage: fade } as const
+// soft left/right edges, done with a mask so whatever is behind (hero glow) stays visible
+const sideFade = 'linear-gradient(to right, transparent, #000 15%, #000 85%, transparent)'
+const sideFadeStyle = { WebkitMaskImage: sideFade, maskImage: sideFade } as const
 
 const FalcoBackground = () => {
   // two identical sets -> translating the track by -50% is a perfect loop
@@ -38,18 +41,17 @@ const FalcoBackground = () => {
       aria-hidden
       className="pointer-events-none absolute inset-0 flex items-center overflow-hidden"
       style={fadeStyle}>
-      <div className="animate-falco-drift flex h-[70%] w-max opacity-40 blur-[3px] motion-reduce:animate-none">
-        {items.map((color, i) => (
-          <div
-            key={i}
-            className="h-full shrink-0"
-            style={{ ...maskStyle, backgroundColor: color, aspectRatio: ASPECT }}
-          />
-        ))}
+      <div className="flex h-[70%] w-full items-center overflow-hidden" style={sideFadeStyle}>
+        <div className="animate-falco-drift flex h-full w-max opacity-40 blur-[3px] motion-reduce:animate-none">
+          {items.map((color, i) => (
+            <div
+              key={i}
+              className="h-full shrink-0"
+              style={{ ...maskStyle, backgroundColor: color, aspectRatio: ASPECT }}
+            />
+          ))}
+        </div>
       </div>
-
-      {/* fade the left/right edges into the page background */}
-      <div className="from-primary via-primary/0 to-primary absolute inset-0 bg-linear-to-r" />
     </div>
   )
 }

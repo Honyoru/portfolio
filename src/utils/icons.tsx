@@ -22,6 +22,9 @@ import SqlIcon from '../assets/icons/sql.svg'
 import MongodbIcon from '../assets/icons/mongodb.svg'
 import LinuxIcon from '../assets/icons/linux.svg'
 import BashIcon from '../assets/icons/bash.svg'
+import RustIcon from '../assets/icons/rust.svg'
+import ClaudeIcon from '../assets/icons/claude.svg'
+import AsmIcon from '../assets/icons/asm.svg'
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -244,12 +247,14 @@ const PhoneIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
 
 export {
   ArrowLeftIcon,
+  AsmIcon,
   ArrowRightIcon,
   BashIcon,
   BurgerIcon,
   CheckIcon,
   ChevronRightIcon,
   CIcon,
+  ClaudeIcon,
   CloseIcon,
   Codepen,
   Css3Icon,
@@ -272,6 +277,7 @@ export {
   PreviewIcon,
   PythonIcon,
   ReactIcon,
+  RustIcon,
   SocketIcon,
   SqlIcon,
   TailwindCSS,
