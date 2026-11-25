@@ -41,8 +41,9 @@ const FalcoBackground = () => {
       aria-hidden
       className="pointer-events-none absolute inset-0 flex items-center overflow-hidden"
       style={fadeStyle}>
-      <div className="flex h-[70%] w-full items-center overflow-hidden" style={sideFadeStyle}>
-        <div className="animate-falco-drift flex h-full w-max opacity-40 blur-[3px] motion-reduce:animate-none">
+      {/* full-height box: a smaller one would clip the blur and leave a hard line */}
+      <div className="absolute inset-0 flex items-center" style={sideFadeStyle}>
+        <div className="animate-falco-drift flex h-[70%] w-max opacity-40 blur-[3px] motion-reduce:animate-none">
           {items.map((color, i) => (
             <div
               key={i}
