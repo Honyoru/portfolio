@@ -1,22 +1,25 @@
+'use client'
+import { useT } from '@/i18n/LanguageProvider'
 import { MsgIcon, PhoneIcon } from '@/utils/icons'
 import ContactForm from './ContactForm'
 
 const ContactSection = () => {
+  const { t } = useT()
   return (
     <section
       id="contact"
       className="bg-secondary my-8 grid grid-cols-1 gap-16 rounded-4xl p-8 md:my-16 md:grid-cols-2 md:gap-8 lg:gap-12">
       <div className="flex flex-col justify-between gap-8">
         <div>
-          <h3 className="text-neutral text-3xl font-bold">Let's Talk</h3>
-          <h4 className="text-accent text-2xl font-bold md:text-3xl">I would love to work with you</h4>
+          <h3 className="text-neutral text-3xl font-bold">{t.contact.title}</h3>
+          <h4 className="text-accent text-2xl font-bold md:text-3xl">{t.contact.subtitle}</h4>
           <p className="text-neutral mt-8">
-            Got an idea? Let’s build something together!
+            {t.contact.pitch}
           </p>
         </div>
 
         <div className="space-y-2">
-          <p className="text-neutral text-lg font-bold">Contact Information</p>
+          <p className="text-neutral text-lg font-bold">{t.contact.info}</p>
           <a
             href="mailto:romain.vialapro@gmail.com"
             className="text-neutral hover:text-accent flex items-center gap-1 font-light transition-colors duration-300">

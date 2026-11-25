@@ -8,6 +8,7 @@
   --tc: #6b7c93;
   --a: #5565e8;
   --n: #0d1a3b;
+  --ac: #ffffff;
 
   --b: #dfdcdc;
   --marquee: #dbe3f7;
@@ -26,6 +27,7 @@
   --tc: #99a1af;
   --a: #18f2e5;
   --n: #fff;
+  --ac: #011627;
 
   --b: #1e2d3d;
   --marquee: #062b48;
@@ -45,6 +47,7 @@
   --tc: #d4deef;
   --a: #38ccb2;
   --n: #fff;
+  --ac: #011627;
   --b: #1e2d3d;
   --marquee: #062b48;
 
@@ -52,6 +55,41 @@
   --gradient-start: #00c1d4;
   --gradient-mid: #18f2e5;
   --gradient-end: #ff6f61;
+}
+
+[data-theme='marine'] {
+  --p: #ffffff;
+  --pc: #1c2f5c;
+  --s: #eef2f9;
+  --sc: #0b1f4b;
+  --tc: #5b6b8a;
+  --a: #f97316;
+  --n: #0b1f4b;
+  --ac: #0b1f4b;
+
+  --b: #d6deec;
+  --marquee: #e8edf7;
+
+  /* for logo */
+  --gradient-start: #f97316;
+  --gradient-mid: #fb923c;
+  --gradient-end: #0b1f4b;
+}
+
+/* Marine: navy surfaces (cards, contact, footer...) with light text on them.
+   The white boxes nested inside those surfaces go back to navy text. */
+[data-theme='marine'] .bg-secondary {
+  --s: #0b1f4b;
+  --sc: #fb923c;
+  --n: #ffffff;
+  --pc: #dbe3f3;
+  --tc: #b9c5df;
+  --b: #24386a;
+}
+
+[data-theme='marine'] .bg-secondary .bg-primary {
+  --pc: #1c2f5c;
+  --n: #0b1f4b;
 }
 
 [data-theme='retro'] {
@@ -62,6 +100,7 @@
   --tc: #8c6b5e;
   --a: #f35248;
   --n: #6d4c41;
+  --ac: #fff3e0;
 
   --b: #ffe0b2;
   --marquee: #ffcc80;
@@ -72,13 +111,15 @@
   --gradient-end: #6d4c41;
 }
 
-@theme {
+/* inline: utilities read var(--s), var(--n)... directly, so a theme can override them on an element */
+@theme inline {
   --color-primary: var(--p);
   --color-primary-content: var(--pc);
   --color-secondary: var(--s);
   --color-secondary-content: var(--sc);
   --color-tertiary-content: var(--tc);
   --color-accent: var(--a);
+  --color-accent-content: var(--ac);
   --color-neutral: var(--n);
   --color-border: var(--b);
   --color-marquee: var(--marquee);

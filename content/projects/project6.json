@@ -5,5 +5,10 @@
   "cover": "/preview/depth-diablo.png",
   "siteAge": "november 2, 2026",
   "type": "Game 🎮",
-  "githubLink": "https://github.com/Honyoru/Depth-Diablo"
+  "githubLink": "https://github.com/Honyoru/Depth-Diablo",
+  "fr": {
+    "shortDescription": "Dungeon crawler 2D de type roguelite en Java avec LibGDX, réalisé en équipe de 3 : 3 classes jouables, des boss et des niveaux générés procéduralement. Conçu avec des design patterns et couvert par des tests unitaires.",
+    "siteAge": "2 novembre 2026",
+    "type": "Jeu 🎮"
+  }
 }

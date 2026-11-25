@@ -5,5 +5,10 @@
   "cover": "/preview/particule-simulator.gif",
   "siteAge": "november 22, 2026",
   "githubLink": "https://github.com/Honyoru/ParticuleSimulator",
-  "type": "Simulation 🦀"
+  "type": "Simulation 🦀",
+  "fr": {
+    "title": "Simulateur de particules",
+    "shortDescription": "Simulation 2D de particules en temps réel écrite en Rust avec macroquad, réalisée pour apprendre le langage : gravité, rebonds sur les bords et collisions entre particules.",
+    "siteAge": "22 novembre 2026"
+  }
 }

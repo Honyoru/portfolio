@@ -1,6 +1,7 @@
 'use client'
 
 import action from '@/actions/contact-form'
+import { useT } from '@/i18n/LanguageProvider'
 import { useActionState } from 'react'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
@@ -8,6 +9,8 @@ import Textarea from '../UI/Textarea'
 
 const ContactForm = () => {
   const [status, formAction, isPending] = useActionState(action, null)
+  const { lang, t } = useT()
+  const c = t.contact
 
   if (status?.success) {
     return (
@@ -17,26 +20,27 @@ const ContactForm = () => {
 
   return (
     <form action={formAction}>
-      <Input label="Full name" id="name" name="name" placeholder="Your name here" required />
+      <input type="hidden" name="lang" value={lang} />
+      <Input label={c.name} id="name" name="name" placeholder={c.namePlaceholder} required />
       <Input
-        label="Email address"
+        label={c.email}
         id="email"
         type="email"
         name="email"
-        placeholder="Your email address here"
+        placeholder={c.emailPlaceholder}
         required
       />
-      <Input label="Subject" id="subject" name="subject" placeholder="Your subject here" />
+      <Input label={c.subject} id="subject" name="subject" placeholder={c.subjectPlaceholder} />
       <Textarea
-        label="Message"
+        label={c.message}
         id="message"
         name="message"
-        placeholder="Your message here"
+        placeholder={c.messagePlaceholder}
         rows={7}
         required
       />
       {!status?.success && <p className="my-2 font-light text-red-600">{status?.message}</p>}
-      <Button text={isPending ? 'Submitting...' : 'Submit'} disabled={isPending} />
+      <Button text={isPending ? c.submitting : c.submit} disabled={isPending} />
     </form>
   )
 }

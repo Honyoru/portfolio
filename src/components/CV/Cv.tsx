@@ -3,8 +3,8 @@
 import { GithubIcon, LinkedIn } from '@/utils/icons'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { useLang } from '@/i18n/LanguageProvider'
 import CvAts from './CvAts'
-import LangSwitch from './LangSwitch'
 import PrintButton from './PrintButton'
 import VersionSwitch from './VersionSwitch'
 import styles from './cv.module.css'
@@ -13,14 +13,14 @@ import {
   cvContent,
   devTags,
   systemTags,
-  type CvLang,
   type CvVersion,
 } from './cvContent'
 
 const { github, linkedin, portfolio } = contactInfo
 
 const Cv = () => {
-  const [lang, setLang] = useState<CvLang>('fr')
+  // the CV follows the site language (switch in the navbar / footer)
+  const { lang, setLang } = useLang()
   const [version, setVersion] = useState<CvVersion>('design')
   const t = cvContent[lang]
 
@@ -28,20 +28,16 @@ const Cv = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const langParam = params.get('lang')
+    // a shared ?lang= link sets the site language
     if (langParam === 'en' || langParam === 'fr') setLang(langParam)
     if (params.get('version') === 'ats') setVersion('ats')
-  }, [])
+  }, [setLang])
 
   const setParam = (key: string, value: string | null) => {
     const url = new URL(window.location.href)
     if (value === null) url.searchParams.delete(key)
     else url.searchParams.set(key, value)
     window.history.replaceState(null, '', url)
-  }
-
-  const changeLang = (next: CvLang) => {
-    setLang(next)
-    setParam('lang', next === 'fr' ? null : next)
   }
 
   const changeVersion = (next: CvVersion) => {
@@ -52,7 +48,6 @@ const Cv = () => {
   return (
     <div lang={lang} className={styles.cv}>
       <div className={styles.toolbar}>
-        <LangSwitch lang={lang} onChange={changeLang} />
         <VersionSwitch lang={lang} version={version} onChange={changeVersion} />
         <PrintButton className={styles.download} />
       </div>

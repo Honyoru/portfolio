@@ -4,38 +4,23 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { BurgerIcon, CloseIcon } from '../../utils/icons'
+import LanguageSwitch from '@/i18n/LanguageSwitch'
+import { useT } from '@/i18n/LanguageProvider'
 import Logo from './Logo'
 
 const navItems = [
-  {
-    label: '_home',
-    href: '/',
-  },
-  {
-    label: '_about-me',
-    href: '/about',
-  },
-  {
-    label: '_projects',
-    href: '/#projects',
-  },
-  {
-    label: '_services',
-    href: '/#services',
-  },
-  {
-    label: '_contact-me',
-    href: '/#contact',
-  },
-  {
-    label: '_cv',
-    href: '/cv',
-  },
-]
+  { key: 'home', href: '/' },
+  { key: 'about', href: '/about' },
+  { key: 'projects', href: '/#projects' },
+  { key: 'services', href: '/#services' },
+  { key: 'contact', href: '/#contact' },
+  { key: 'cv', href: '/cv' },
+] as const
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
   const pathname = usePathname()
+  const { t } = useT()
 
   const toggleMenu = () => {
     setIsVisible(!isVisible)
@@ -44,16 +29,25 @@ const Navbar = () => {
   return (
     <nav className="bg-primary border-border h-16 overflow-hidden border-b">
       <div className="mx-auto flex h-full w-dvw max-w-[1200px] items-center justify-between px-4 py-1">
-        {isVisible ? (
-          <div className="text-primary-content md:hidden">_menu</div>
-        ) : (
-          <Link href="/">
-            <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static">
-              <Logo />
-              <span className="text-primary-content">Romain_Viala</span>
-            </div>
-          </Link>
-        )}
+        <div className="flex items-center gap-4 lg:gap-6">
+          {isVisible ? (
+            <div className="text-primary-content md:hidden">{t.nav.menu}</div>
+          ) : (
+            <Link href="/">
+              <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static">
+                <Logo />
+                <span className="text-primary-content hidden sm:inline md:hidden lg:inline">
+                  Romain_Viala
+                </span>
+              </div>
+            </Link>
+          )}
+          <LanguageSwitch
+            className="border-border flex gap-1 rounded-md border p-0.5 text-sm"
+            activeClassName="bg-accent text-accent-content rounded px-1.5"
+            inactiveClassName="text-primary-content hover:text-neutral px-1.5"
+          />
+        </div>
 
         <div className="md:hidden">
           <button onClick={toggleMenu}>
@@ -67,7 +61,7 @@ const Navbar = () => {
 
         <ul
           className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
-          {navItems.map(({ label, href }) => (
+          {navItems.map(({ key, href }) => (
             <li
               key={href}
               onClick={() => setIsVisible(false)}
@@ -75,7 +69,7 @@ const Navbar = () => {
               <Link
                 href={href}
                 className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 ${pathname === href ? 'text-neutral cursor-text' : ''}`}>
-                {label}
+                {t.nav[key]}
               </Link>
             </li>
           ))}

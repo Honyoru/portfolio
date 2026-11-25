@@ -1,4 +1,5 @@
 // Data for portfolio
+import type { Localized } from '../i18n/dictionary'
 import {
   PythonIcon,
   CIcon,
@@ -21,52 +22,79 @@ import {
 } from '../utils/icons'
 
 // Service Data
-export const serviceData = [
+export const serviceData: { icon: string; title: Localized<string>; shortDescription: Localized<string> }[] = [
     
   {
     icon: PythonIcon,
-    title: 'Python Development',
-    shortDescription: 'Writing clean scripts and applications to automate tasks and process data with Python.',
+    title: { en: 'Python Development', fr: 'Développement Python' },
+    shortDescription: {
+      en: 'Writing clean scripts and applications to automate tasks and process data with Python.',
+      fr: 'Écriture de scripts et d\'applications propres pour automatiser des tâches et traiter des données en Python.',
+    },
   },
   {
     icon: JavaIcon,
-    title: 'Java Development',
-    shortDescription: 'Building object-oriented applications and games in Java, with design patterns and unit tests.',
+    title: { en: 'Java Development', fr: 'Développement Java' },
+    shortDescription: {
+      en: 'Building object-oriented applications and games in Java, with design patterns and unit tests.',
+      fr: 'Création d\'applications et de jeux orientés objet en Java, avec design patterns et tests unitaires.',
+    },
   },
   {
     icon: ReactIcon,
-    title: 'React.js Development',
-    shortDescription: 'Building modern and responsive user interfaces with React.js.',
+    title: { en: 'React.js Development', fr: 'Développement React.js' },
+    shortDescription: {
+      en: 'Building modern and responsive user interfaces with React.js.',
+      fr: 'Création d\'interfaces modernes et responsives avec React.js.',
+    },
   },
   {
     icon: NextjsIcon,
-    title: 'Next.js Development',
-    shortDescription: 'Creating server-rendered React applications with Next.js.',
+    title: { en: 'Next.js Development', fr: 'Développement Next.js' },
+    shortDescription: {
+      en: 'Creating server-rendered React applications with Next.js.',
+      fr: 'Création d\'applications React rendues côté serveur avec Next.js.',
+    },
   },
   {
     icon: TypescriptIcon,
-    title: 'TypeScript Development',
-    shortDescription: 'Ensuring robust and maintainable code with TypeScript.',
+    title: { en: 'TypeScript Development', fr: 'Développement TypeScript' },
+    shortDescription: {
+      en: 'Ensuring robust and maintainable code with TypeScript.',
+      fr: 'Un code robuste et maintenable grâce à TypeScript.',
+    },
   },
   {
     icon: RustIcon,
-    title: 'Rust Development',
-    shortDescription: 'Writing fast and memory-safe programs in Rust, from simulations to systems tools.',
+    title: { en: 'Rust Development', fr: 'Développement Rust' },
+    shortDescription: {
+      en: 'Writing fast and memory-safe programs in Rust, from simulations to systems tools.',
+      fr: 'Écriture de programmes rapides et sûrs en mémoire en Rust, des simulations aux outils système.',
+    },
   },
   {
     icon: CIcon,
-    title: 'C Programming',
-    shortDescription: 'Building efficient, low-level software in C, from compilers to 3D games.',
+    title: { en: 'C Programming', fr: 'Programmation C' },
+    shortDescription: {
+      en: 'Building efficient, low-level software in C, from compilers to 3D games.',
+      fr: 'Conception de logiciels bas niveau efficaces en C, des compilateurs aux jeux 3D.',
+    },
   },
   {
     icon: SqlIcon,
-    title: 'SQL Databases',
-    shortDescription: 'Modeling, querying and optimizing relational data with SQL.',
+    title: { en: 'SQL Databases', fr: 'Bases de données SQL' },
+    shortDescription: {
+      en: 'Modeling, querying and optimizing relational data with SQL.',
+      fr: 'Modélisation, requêtes et optimisation de données relationnelles avec SQL.',
+    },
   },
   {
     icon: GitIcon,
-    title: 'Git Version Control',
-    shortDescription: 'Collaborating efficiently and keeping a clean project history with Git.',
+    title: { en: 'Git Version Control', fr: 'Versionnage avec Git' },
+    shortDescription: {
+      en: 'Collaborating efficiently and keeping a clean project history with Git.',
+      fr: 'Collaborer efficacement et garder un historique de projet propre avec Git.',
+    },
   },
 ]
 
@@ -93,31 +121,13 @@ export const skillList = [
 ]
 
 export const footerLinks = [
-  {
-    title: 'Home',
-    href: '#'
-  },
-  {
-    title: 'About Me',
-    href: '/about',
-  },
-  {
-    title: 'Projects',
-    href: '#projects'
-  },
-  {
-    title: 'Services',
-    href: '#services',
-  },
-  {
-    title: 'Contact',
-    href: '#contact',
-  },
-  {
-    title: 'Cv',
-    href: '/cv',
-  },
-]
+  { key: 'home', href: '#' },
+  { key: 'about', href: '/about' },
+  { key: 'projects', href: '#projects' },
+  { key: 'services', href: '#services' },
+  { key: 'contact', href: '#contact' },
+  { key: 'cv', href: '/cv' },
+] as const
 
 export const themes = [
   {
@@ -133,31 +143,41 @@ export const themes = [
     colors: ['#b2e4e8', '#004a55', '#00c1d4', '#004a55', '#ff6f61'],
   },
   {
+    name: 'Marine',
+    colors: ['#ffffff', '#0b1f4b', '#f97316', '#0b1f4b', '#e8edf7'],
+  },
+  {
     name: 'Retro',
     colors: ['#fff3e0', '#6d4c41', '#ffcc80', '#5d4037', '#ffab40'],
   },
 ]
 
-export const languages = ['En']
-
-export const aboutSections = [
+export const aboutSections: { title: Localized<string>; text: Localized<string>; image: string; alt: string }[] = [
   {
-    title: 'Who I am',
-    text: 'I came from near Saint-Etienne where I grow up and done most of my studies / life. Since 2024, I live in the Montpellier region.',
+    title: { en: 'Who I am', fr: 'Qui je suis' },
+    text: {
+      en: 'I came from near Saint-Etienne where I grow up and done most of my studies / life. Since 2024, I live in the Montpellier region.',
+      fr: "Je viens des environs de Saint-Étienne, où j'ai grandi et fait la plupart de mes études. Depuis 2024, je vis dans la région de Montpellier.",
+    },
     image: '/images/Saint-Etienne.jpeg',
     alt: 'Saint-Etienne',
   },
   {
-    title: 'My biggest hobby',
-    text: 'For years I organized esports events. Moreover, I am a player for MUC now but I had severals other teams. The game I play is Super Smash Bros Ultimate and play only one charater : Falco. I am one of the best on my character in France and I was in the top ~300 in France',
+    title: { en: 'My biggest hobby', fr: 'Ma plus grande passion' },
+    text: {
+      en: 'For years I organized esports events. Moreover, I am a player for MUC now but I had severals other teams. The game I play is Super Smash Bros Ultimate and play only one charater : Falco. I am one of the best on my character in France and I was in the top ~300 in France',
+      fr: "Pendant des années, j'ai organisé des événements esport. Je joue aujourd'hui pour MUC, après plusieurs autres équipes. Mon jeu est Super Smash Bros Ultimate et je ne joue qu'un seul personnage : Falco. Je suis l'un des meilleurs joueurs Falco de France et j'ai été classé dans le top ~300 français.",
+    },
     image: '/images/Honyoru.jpeg',
     alt: 'Honyoru',
   },
   {
-    title: 'What I wish to do',
-    text: 'In the futur, I wish to have the luck to have varieties in my work. I love to learn new thing (Even if they aren\'t useful to me now)',
+    title: { en: 'What I wish to do', fr: "Ce que j'aimerais faire" },
+    text: {
+      en: "In the futur, I wish to have the luck to have varieties in my work. I love to learn new thing (Even if they aren't useful to me now)",
+      fr: "À l'avenir, j'aimerais avoir la chance d'avoir de la variété dans mon travail. J'adore apprendre de nouvelles choses (même si elles ne me sont pas utiles tout de suite).",
+    },
     image: '/images/Futur.jpeg',
     alt: 'Futur',
   },
 ]
-

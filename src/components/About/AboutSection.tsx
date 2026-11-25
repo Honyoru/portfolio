@@ -1,13 +1,16 @@
+'use client'
+import { useT } from '@/i18n/LanguageProvider'
 import Image from 'next/image'
 import { aboutSections } from '@/appData'
 import SectionHeading from '../SectionHeading/SectionHeading'
 
 const AboutSection = () => {
+  const { lang, t } = useT()
   return (
     <section id="about" className="my-14">
       <SectionHeading
-        title="// About me"
-        subtitle="A bit more about who I am."
+        title={t.about.title}
+        subtitle={t.about.subtitle}
       />
 
       <div className="mt-8 flex flex-col gap-12 md:mt-[3.75rem] md:gap-16">
@@ -17,7 +20,7 @@ const AboutSection = () => {
 
           return (
             <article
-              key={title}
+              key={alt}
               className="bg-secondary border-border grid grid-cols-1 items-center gap-6 rounded-[14px] border p-5 md:grid-cols-2 md:gap-12 md:p-8">
               <figure
                 className={`relative aspect-[4/3] w-full overflow-hidden rounded-xl ${
@@ -33,8 +36,8 @@ const AboutSection = () => {
               </figure>
 
               <div className={pictureOnRight ? 'md:order-1' : 'md:order-2'}>
-                <h3 className="text-accent mb-4 text-xl font-bold md:text-2xl">{title}</h3>
-                <p className="text-neutral leading-7 text-pretty">{text}</p>
+                <h3 className="text-accent mb-4 text-xl font-bold md:text-2xl">{title[lang]}</h3>
+                <p className="text-neutral leading-7 text-pretty">{text[lang]}</p>
               </div>
             </article>
           )

@@ -4,22 +4,24 @@ import useRotatingAnimation from '@/hooks/useRotatingAnimation'
 import Image from 'next/image'
 import { HeroImage } from '../../utils/images'
 import Ellipse from './Ellipse'
+import { useT } from '@/i18n/LanguageProvider'
 
 const Hero = () => {
   const ellipseRef = useRotatingAnimation()
-  const role = useRoleSwitcher({ roles: ['FULLSTACK DEVELOPER', 'APP DEVELOPER', 'ALWAYS LEARNING'] })
+  const { t } = useT()
+  const role = useRoleSwitcher({ roles: t.hero.roles })
 
   return (
-    <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
+    <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat lg:bg-[length:640px_auto] lg:bg-[position:180px_-70px]">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-4 px-4 pt-12 pb-10 md:grid-cols-2 lg:p-4">
         <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem]">
           <h1>
-            <span className="text-neutral mb-2 block text-3xl font-bold">Hi - I'm Romain Viala</span>
+            <span className="text-neutral mb-2 block text-3xl font-bold">{t.hero.greeting}</span>
             <span className="text-accent block text-[1.75rem] font-bold">{role}</span>
           </h1>
 
           <h2 className="text-neutral mt-3">
-            Always learning new ways to solve new problems !
+            {t.hero.tagline}
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
@@ -27,13 +29,13 @@ const Hero = () => {
               href="https://www.github.com/Honyoru"
               aria-label="View GitHub"
               className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
-              My GitHub
+              {t.hero.github}
             </a>
             <a
               href="https://www.linkedin.com/in/romain-viala-44006632a/"
               aria-label="View LinkedIn Profile"
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
-              My LinkedIn Profile
+              {t.hero.linkedin}
             </a>
           </div>
         </div>

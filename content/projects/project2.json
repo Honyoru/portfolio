@@ -3,5 +3,10 @@
   "title": "Hérisson vs Blaireau",
   "shortDescription": "A local multiplayer zone-capture game: the screen is projected for everyone and each player uses their phone as a controller.",
   "siteAge": "may 2020",
-  "type": "Multiplayer 🎮"
+  "type": "Multiplayer 🎮",
+  "fr": {
+    "shortDescription": "Jeu multijoueur local de capture de zones : l'écran est projeté pour tout le monde et chaque joueur utilise son téléphone comme manette.",
+    "siteAge": "mai 2020",
+    "type": "Multijoueur 🎮"
+  }
 }

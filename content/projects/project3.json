@@ -3,5 +3,11 @@
   "title": "C Compiler",
   "shortDescription": "A compiler built in C, including pattern recognition to read and process source code.",
   "siteAge": "december 2019",
-  "type": "Systems ⚙️"
+  "type": "Systems ⚙️",
+  "fr": {
+    "title": "Compilateur C",
+    "shortDescription": "Un compilateur écrit en C, avec reconnaissance de motifs pour lire et traiter le code source.",
+    "siteAge": "décembre 2019",
+    "type": "Systèmes ⚙️"
+  }
 }

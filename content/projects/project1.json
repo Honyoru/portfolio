@@ -6,5 +6,9 @@
   "cover": "/preview/bubbles.png",
   "siteAge": "october 2026",
   "githubLink": "https://github.com/Honyoru/Bubbles-pub",
-  "type": "Web 🌐"
+  "type": "Web 🌐",
+  "fr": {
+    "shortDescription": "Site de recherche d'emploi où candidats et employeurs ont chacun leur propre profil. Réalisé avec Next.js et des outils web modernes.",
+    "siteAge": "octobre 2026"
+  }
 }

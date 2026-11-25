@@ -3,5 +3,11 @@
   "title": "Labyrinth Game",
   "shortDescription": "Digital adaptation of the board game Labyrinthe.",
   "siteAge": "may 2019",
-  "type": "Game 🎮"
+  "type": "Game 🎮",
+  "fr": {
+    "title": "Jeu du Labyrinthe",
+    "shortDescription": "Adaptation numérique du jeu de société Labyrinthe.",
+    "siteAge": "mai 2019",
+    "type": "Jeu 🎮"
+  }
 }

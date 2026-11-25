@@ -12,6 +12,8 @@ export interface Project {
   numberOfSales?: string
   type: string
   siteAge?: string
+  /** French overrides, the English fields above are the default */
+  fr?: Partial<Pick<Project, 'title' | 'shortDescription' | 'type' | 'siteAge'>>
 }
 
 export interface Heading {

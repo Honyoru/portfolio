@@ -1,8 +1,12 @@
-import { footerLinks, languages } from '@/appData'
+'use client'
+import { footerLinks } from '@/appData'
 import { socials } from '@/appData/personal'
+import { useT } from '@/i18n/LanguageProvider'
+import LanguageSwitch from '@/i18n/LanguageSwitch'
 
 
 const Footer = () => {
+  const { t } = useT()
   return (
     <footer className="bg-secondary relative flex min-h-[560px] flex-col justify-between gap-16 overflow-hidden px-4 py-14 md:p-14 print:hidden">
       <div className="relative z-20 flex flex-col gap-12">
@@ -28,14 +32,14 @@ const Footer = () => {
               href={link.href}
               key={link.href}
               className="text-tertiary-content hover:text-neutral transition-colors duration-300 hover:underline">
-              {link.title}.
+              {t.footer.links[link.key]}.
             </a>
           ))}
         </div>
 
         <div className="flex flex-col gap-10">
           <div className="flex flex-col">
-            <h5 className="text-neutral mb-4 text-lg font-medium">Contact Me</h5>
+            <h5 className="text-neutral mb-4 text-lg font-medium">{t.footer.contact}</h5>
             <a
               href="mailto:romain.vialapro@gmail.com"
               className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
@@ -48,15 +52,15 @@ const Footer = () => {
             </a>
           </div>
           <div>
-            <h5 className="text-neutral mb-4 text-lg font-medium">Location</h5>
+            <h5 className="text-neutral mb-4 text-lg font-medium">{t.footer.location}</h5>
             <address className="text-tertiary-content flex flex-col text-sm font-light">
               <span>34080, Montpellier</span>
             </address>
           </div>
           <div>
-            <h5 className="text-neutral mb-4 text-lg font-medium">Credits</h5>
+            <h5 className="text-neutral mb-4 text-lg font-medium">{t.footer.credits}</h5>
             <div className="text-tertiary-content flex flex-col text-sm font-light">
-              Picture : Léa Richard / Template : Abdul Basit
+              {t.footer.creditsText}
             </div>
           </div>
         </div>
@@ -75,16 +79,8 @@ const Footer = () => {
           ))}
         </ul>
         <div>
-          <p className="text-neutral mb-8 text-right text-sm">Languages</p>
-          <div className="flex gap-8 md:gap-4 lg:gap-8">
-            {languages.map((language, idx) => (
-              <span
-                key={language}
-                className={idx === 0 ? 'text-neutral' : 'text-tertiary-content'}>
-                {language}
-              </span>
-            ))}
-          </div>
+          <p className="text-neutral mb-8 text-right text-sm">{t.footer.languages}</p>
+          <LanguageSwitch className="flex justify-end gap-8 md:gap-4 lg:gap-8" />
         </div>
       </div>
 

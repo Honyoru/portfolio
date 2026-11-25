@@ -6,17 +6,17 @@ interface RoleSwitcherOptions {
 }
 
 function useRoleSwitcher({ roles, interval = 1800 }: RoleSwitcherOptions): string {
-  const [role, setRole] = useState<string>(roles.length > 0 ? roles[0] : '')
+  // keep the index (not the text) so a language switch shows the translated role right away
+  const [index, setIndex] = useState(0)
+  const count = roles.length
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRole((prev) => roles[(roles.indexOf(prev) + 1) % roles.length])
-    }, interval)
-
+    if (count === 0) return
+    const intervalId = setInterval(() => setIndex((prev) => (prev + 1) % count), interval)
     return () => clearInterval(intervalId)
-  }, [roles, interval])
+  }, [count, interval])
 
-  return role
+  return roles[index % Math.max(count, 1)] ?? ''
 }
 
 export default useRoleSwitcher

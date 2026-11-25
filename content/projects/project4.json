@@ -4,5 +4,11 @@
   "shortDescription": "A 3D climbing game developed in C.",
   "cover": "/preview/climbing.png",
   "siteAge": "may 2020",
-  "type": "Game 🎮"
+  "type": "Game 🎮",
+  "fr": {
+    "title": "Jeu d'escalade 3D",
+    "shortDescription": "Un jeu d'escalade en 3D développé en C.",
+    "siteAge": "mai 2020",
+    "type": "Jeu 🎮"
+  }
 }
